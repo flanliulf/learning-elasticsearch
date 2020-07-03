@@ -1,0 +1,14 @@
+## 集群名(默认值: elasticsearch，配置文件`cluster.name`: es-mongodb)
+#spring.data.elasticsearch.cluster-name=elasticsearch
+## 集群节点地址列表，用逗号分隔
+#spring.data.elasticsearch.cluster-nodes=localhost:9200
+server:
+  port: 8080
+
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300 # 此处注意，Java API的端口是9300
+      cluster-name: elasticsearch
+      repositories:
+        enabled: true
